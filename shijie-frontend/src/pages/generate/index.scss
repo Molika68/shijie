@@ -1,0 +1,43 @@
+@import '../../styles/theme.scss';
+
+.generate-page {
+  padding-bottom: 120rpx;
+}
+
+.create-input-area {
+  .prompt-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    background-color: transparent;
+    color: $text-primary;
+    font-size: 30rpx;
+    line-height: 1.6;
+    min-height: 120rpx;
+    border: none;
+    outline: none;
+    resize: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: inherit;
+
+    &::placeholder {
+      color: $text-muted;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// 小程序 Taro Textarea 兜底
+taro-textarea-core,
+taro-textarea-core .taro-textarea {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: $text-primary !important;
+}

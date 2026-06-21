@@ -1,0 +1,26 @@
+@import '../../styles/theme.scss';
+
+.history-page {
+  padding-bottom: 60rpx;
+
+  .filter-bar {
+    display: flex;
+    gap: 20rpx;
+    flex-wrap: wrap;
+    margin-top: 32rpx;
+    margin-bottom: 16rpx;
+  }
+
+  .card-item {
+    justify-content: space-between;
+
+    .type-badge {
+      font-size: 22rpx;
+      color: $accent;
+      background: rgba(183, 122, 255, 0.15);
+      padding: 8rpx 20rpx;
+      border-radius: 20rpx;
+      flex-shrink: 0;
+    }
+  }
+}

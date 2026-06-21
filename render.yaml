@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: shijie-api
+    runtime: node
+    plan: free
+    rootDir: shijie-backend
+    buildCommand: npm install && npx prisma generate && npm run build && npx prisma migrate deploy
+    startCommand: npm run start:prod
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AI_PROVIDER
+        value: dashscope
+      - key: DASHSCOPE_API_KEY
+        sync: false
+      - key: AI_DAILY_LIMIT
+        value: "50"

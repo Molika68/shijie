@@ -1,0 +1,68 @@
+@import '../../styles/theme.scss';
+
+.home-page {
+  padding: 0 0 140rpx;
+  box-sizing: border-box;
+}
+
+.home-header {
+  flex-shrink: 0;
+}
+
+.mock-banner {
+  margin-top: 24rpx;
+  padding: 24rpx 28rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 180, 80, 0.12);
+  border: 1px solid rgba(255, 180, 80, 0.35);
+
+  .mock-title {
+    display: block;
+    font-size: 28rpx;
+    color: #ffb450;
+    font-weight: 600;
+    margin-bottom: 8rpx;
+  }
+
+  .mock-desc {
+    display: block;
+    font-size: 24rpx;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.recognize-section {
+  margin-top: 32rpx;
+
+  .upload-area {
+    @include glass-card;
+    padding: 32rpx;
+  }
+
+  .recognize-btn {
+    margin-top: 32rpx;
+    width: 100%;
+    flex: none;
+    @include btn-gradient;
+    font-size: 32rpx;
+    padding: 24rpx 0;
+    box-sizing: border-box;
+  }
+
+  .hint {
+    text-align: center;
+    font-size: 24rpx;
+    color: $text-muted;
+    margin-top: 20rpx;
+    line-height: 1.6;
+  }
+}
+
+.record-scroll {
+  margin-top: 32rpx;
+}
+
+.record-list {
+  padding-bottom: 24rpx;
+}

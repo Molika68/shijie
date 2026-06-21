@@ -1,0 +1,15 @@
+.voice-player {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8f0fe;
+  color: #1a73e8;
+  padding: 16px 32px;
+  border-radius: 32px;
+  font-size: 28px;
+  margin-top: 24px;
+
+  &.playing {
+    opacity: 0.7;
+  }
+}

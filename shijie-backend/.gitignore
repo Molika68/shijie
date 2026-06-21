@@ -1,0 +1,7 @@
+node_modules/
+dist/
+uploads/
+prisma/pglite-data/
+prisma/dev.db
+.env
+*.tsbuildinfo

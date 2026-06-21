@@ -1,0 +1,43 @@
+@import "./styles/theme.scss";
+
+html,
+body,
+#app {
+  background: #0e0e28;
+}
+
+page {
+  background: #0e0e28;
+  font-family:
+    -apple-system, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  color: #f0f0f5;
+}
+
+.taro_router,
+.taro_page,
+.taro-tabbar__panel {
+  background: #0e0e28 !important;
+}
+
+.taro_router > .taro_page {
+  background-color: #0e0e28 !important;
+}
+
+.taro-tabbar__panel > .taro_page.taro_tabbar_page {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.taro-navigation-bar-show {
+  background: #0e0e28 !important;
+}
+
+.taro-navigation-bar-title {
+  color: #f0f0f5 !important;
+}
+
+.create-input-area textarea,
+.create-input-area .taro-textarea {
+  background: transparent !important;
+  background-color: transparent !important;
+}

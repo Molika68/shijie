@@ -1,0 +1,2 @@
+# Migration meta for Prisma
+provider = "postgresql"

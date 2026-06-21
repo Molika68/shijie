@@ -1,0 +1,25 @@
+.DS_Store
+*.code-workspace
+
+# 本目录其他学习项目，不纳入识界仓库
+nest-project/
+next-project/
+Nest.js 网页/
+Next.js 网页/
+学习计划.md
+学习计划2.md
+部署上线.md
+*AI Mock*
+
+# Node / 构建产物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# 密钥与本地数据（切勿提交）
+.env
+.env.local
+.env.*.local
+shijie-backend/uploads/
+shijie-backend/prisma/pglite-data/
+shijie-backend/prisma/dev.db
