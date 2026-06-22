@@ -18,5 +18,6 @@
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false
-  }
+  },
+  "exclude": ["prisma.config.ts", "node_modules", "dist"]
 }
