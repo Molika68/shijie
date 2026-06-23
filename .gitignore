@@ -1,25 +1,45 @@
-.DS_Store
-*.code-workspace
-
-# 本目录其他学习项目，不纳入识界仓库
-nest-project/
-next-project/
-Nest.js 网页/
-Next.js 网页/
-学习计划.md
-学习计划2.md
-部署上线.md
-*AI Mock*
-
-# Node / 构建产物
-node_modules/
-dist/
-*.tsbuildinfo
-
-# 密钥与本地数据（切勿提交）
+# 环境变量
 .env
 .env.local
 .env.*.local
-shijie-backend/uploads/
-shijie-backend/prisma/pglite-data/
-shijie-backend/prisma/dev.db
+
+# 日志
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 依赖
+node_modules/
+.pnp/
+.pnp.js
+
+# 构建产物
+dist/
+build/
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 上传文件
+uploads/
+*.tmp
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+
+# Prisma
+prisma/migrations/
