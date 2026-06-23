@@ -62,7 +62,7 @@ function createSolidPng(size, r, g, b) {
 const svgFiles = fs.readdirSync(tabDir).filter((f) => f.endsWith('.svg'));
 for (const file of svgFiles) {
   const isActive = file.includes('-active');
-  const color = isActive ? [176, 122, 255] : [106, 106, 142];
+  const color = isActive ? [123, 92, 255] : [138, 138, 170];
   const png = createSolidPng(81, ...color);
   const out = path.join(tabDir, file.replace('.svg', '.png'));
   fs.writeFileSync(out, png);

@@ -11,17 +11,18 @@ export default defineAppConfig({
     'pages/login/index',
   ],
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#0e0e28',
+    backgroundTextStyle: 'dark',
+    navigationBarBackgroundColor: '#aebefc',
     navigationBarTitleText: '识界',
-    navigationBarTextStyle: 'white',
-    backgroundColor: '#0e0e28',
+    navigationBarTextStyle: 'black',
+    backgroundColor: '#aebefc',
   },
   tabBar: {
-    color: '#6a6a8e',
-    selectedColor: '#b07aff',
-    backgroundColor: '#0e0e28',
-    borderStyle: 'black',
+    color: '#8a8aaa',
+    selectedColor: '#7b5cff',
+    backgroundColor: '#eeeef8',
+    borderStyle: 'white',
+    safeAreaInsetBottom: true,
     list: [
       {
         pagePath: 'pages/home/index',

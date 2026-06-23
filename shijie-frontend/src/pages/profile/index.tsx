@@ -94,8 +94,8 @@ export default function ProfilePage() {
       showScrollbar={false}
       refresherEnabled
       refresherTriggered={refreshing}
-      refresherBackground="#0e0e28"
-      refresherDefaultStyle="white"
+      refresherBackground="#aebefc"
+      refresherDefaultStyle="black"
       onRefresherRefresh={onRefresherRefresh}
     >
       <View className="page-dark profile-page">

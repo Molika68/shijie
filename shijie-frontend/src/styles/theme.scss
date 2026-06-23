@@ -1,15 +1,16 @@
-// 识界设计系统 — 深色玻璃拟态主题
-$bg-page: #0e0e28;
-$bg-card: rgba(255, 255, 255, 0.04);
-$bg-card-hover: rgba(255, 255, 255, 0.08);
-$border-subtle: rgba(255, 255, 255, 0.05);
-$text-primary: #f0f0f5;
-$text-secondary: #8a8aaa;
-$text-muted: #7a7a9a;
-$text-dim: #5a5a7a;
-$accent: #b07aff;
-$accent-end: #8a6cff;
-$accent-green: #4cd9b0;
+// 识界设计系统 — 清新渐变主题
+$bg-page: linear-gradient(to bottom, #aebefc, #eeeef8);
+$bg-page-solid: #aebefc;
+$bg-card: rgba(255, 255, 255, 0.5);
+$bg-card-hover: rgba(255, 255, 255, 0.7);
+$border-subtle: rgba(0, 0, 0, 0.06);
+$text-primary: #2a2a4a;
+$text-secondary: #5a5a7a;
+$text-muted: #8a8aaa;
+$text-dim: #aaaacc;
+$accent: #7b5cff;
+$accent-end: #6a4def;
+$accent-green: #2da878;
 $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 
 @mixin glass-card {
@@ -23,7 +24,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   color: #fff;
   font-weight: 600;
   border-radius: 60rpx;
-  box-shadow: 0 8rpx 40rpx rgba(127, 108, 255, 0.3);
+  box-shadow: 0 8rpx 40rpx rgba(123, 92, 255, 0.25);
   text-align: center;
 }
 
@@ -37,6 +38,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 .page-dark {
   min-height: 100vh;
   background: $bg-page;
+  background-attachment: fixed;
   color: $text-primary;
   padding: 24rpx 40rpx 40rpx;
   box-sizing: border-box;
@@ -53,7 +55,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 .greeting {
   font-size: 44rpx;
   font-weight: 600;
-  color: #fff;
+  color: $text-primary;
   margin-top: 12rpx;
   letter-spacing: 1rpx;
 
@@ -71,7 +73,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 .page-title {
   font-size: 44rpx;
   font-weight: 700;
-  color: #fff;
+  color: $text-primary;
   margin-top: 12rpx;
 
   .highlight {
@@ -89,16 +91,16 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   display: inline-flex;
   align-items: center;
   gap: 16rpx;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.4);
   padding: 20rpx 40rpx 20rpx 32rpx;
   border-radius: 60rpx;
   font-size: 28rpx;
-  color: #d0d0e8;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: $text-secondary;
+  border: 1px solid $border-subtle;
   margin-top: 32rpx;
 
   &:active {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.6);
     transform: scale(0.96);
   }
 
@@ -143,7 +145,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
     width: 104rpx;
     height: 104rpx;
     border-radius: 24rpx;
-    background: linear-gradient(135deg, #2a2a4a, #1a1a3a);
+    background: linear-gradient(135deg, #d0d8f5, #e8ecfa);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,17 +210,17 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   }
 
   &.active {
-    border-color: rgba(183, 122, 255, 0.4);
-    background: rgba(183, 122, 255, 0.12);
+    border-color: rgba(123, 92, 255, 0.4);
+    background: rgba(123, 92, 255, 0.1);
   }
 }
 
 .create-input-area {
   margin-top: 48rpx;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 32rpx;
   padding: 28rpx 36rpx;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid $border-subtle;
 }
 
 .prompt-input {
@@ -253,15 +255,15 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 }
 
 .btn-upload {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #d0d0e8;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid $border-subtle;
+  color: $text-secondary;
   font-size: 28rpx;
   padding: 24rpx 40rpx;
   border-radius: 60rpx;
 
   &:active {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -275,15 +277,15 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 .style-tag {
   padding: 12rpx 32rpx;
   border-radius: 40rpx;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid $border-subtle;
   font-size: 24rpx;
-  color: #b0b0cc;
+  color: $text-muted;
 
   &.active {
-    background: rgba(183, 122, 255, 0.2);
-    border-color: rgba(183, 122, 255, 0.3);
-    color: #fff;
+    background: rgba(123, 92, 255, 0.15);
+    border-color: rgba(123, 92, 255, 0.3);
+    color: $accent;
   }
 }
 
@@ -303,14 +305,14 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   align-items: center;
   justify-content: center;
   font-size: 72rpx;
-  box-shadow: 0 16rpx 60rpx rgba(127, 108, 255, 0.3);
+  box-shadow: 0 16rpx 60rpx rgba(123, 92, 255, 0.25);
   margin-bottom: 20rpx;
 }
 
 .profile-name {
   font-size: 36rpx;
   font-weight: 600;
-  color: #fff;
+  color: $text-primary;
 }
 
 .profile-name-edit {
@@ -333,7 +335,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
     .num {
       font-size: 44rpx;
       font-weight: 700;
-      color: #fff;
+      color: $text-primary;
     }
 
     .label {
@@ -357,13 +359,13 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
     .title {
       font-size: 32rpx;
       font-weight: 600;
-      color: #fff;
+      color: $text-primary;
       flex: 1;
       margin-right: 16rpx;
     }
 
     .badge-confidence {
-      background: rgba(0, 200, 150, 0.15);
+      background: rgba(45, 168, 120, 0.12);
       color: $accent-green;
       font-size: 24rpx;
       padding: 8rpx 28rpx;
@@ -375,7 +377,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 
   .desc {
     font-size: 28rpx;
-    color: #b0b0cc;
+    color: $text-secondary;
     line-height: 1.7;
     margin-top: 20rpx;
   }
@@ -389,9 +391,9 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 
   .btn-outline {
     flex: 1;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #d0d0e8;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid $border-subtle;
+    color: $text-secondary;
     font-size: 26rpx;
     padding: 20rpx 0;
     border-radius: 60rpx;
@@ -399,7 +401,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
     min-width: 160rpx;
 
     &:active {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -426,14 +428,14 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
     justify-content: space-between;
     align-items: center;
     padding: 28rpx 36rpx;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 
     &:last-child {
       border-bottom: none;
     }
 
     &:active {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.6);
     }
 
     .left {
@@ -449,7 +451,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 
       .label {
         font-size: 30rpx;
-        color: #e0e0f0;
+        color: $text-primary;
       }
     }
 
@@ -479,7 +481,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   width: 100%;
   height: 400rpx;
   border-radius: 40rpx;
-  background: linear-gradient(135deg, #2a1a4a, #1a1a3a);
+  background: linear-gradient(135deg, #d0d8f5, #e8ecfa);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -497,7 +499,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 .detail-title {
   font-size: 40rpx;
   font-weight: 700;
-  color: #fff;
+  color: $text-primary;
 }
 
 .detail-sub {
@@ -511,7 +513,7 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   margin-top: 28rpx;
   font-size: 30rpx;
   line-height: 1.8;
-  color: #d0d0e8;
+  color: $text-secondary;
 
   .highlight {
     color: $accent;
@@ -528,10 +530,10 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
   .tag {
     padding: 12rpx 32rpx;
     border-radius: 40rpx;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid $border-subtle;
     font-size: 24rpx;
-    color: #b0b0cc;
+    color: $text-muted;
   }
 }
 
@@ -542,16 +544,16 @@ $gradient-accent: linear-gradient(135deg, $accent, $accent-end);
 
   .btn-secondary {
     flex: 1;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #d0d0e8;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid $border-subtle;
+    color: $text-secondary;
     font-size: 30rpx;
     padding: 28rpx 0;
     border-radius: 60rpx;
     text-align: center;
 
     &:active {
-      background: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.6);
     }
   }
 

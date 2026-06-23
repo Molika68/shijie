@@ -41,12 +41,7 @@ export default function HomePage() {
 
   const refreshPage = useCallback(async () => {
     if (!isLoggedIn()) return;
-    await Promise.all([
-      loadRecords(true),
-      getAppConfig()
-        .then(res => setAiMock(res.data.aiMock))
-        .catch(() => {}),
-    ]);
+    await Promise.all([loadRecords(true), getAppConfig().catch(() => {})]);
   }, [loadRecords]);
 
   useDidShow(() => {
@@ -55,9 +50,7 @@ export default function HomePage() {
       return;
     }
     loadRecords();
-    getAppConfig()
-      .then(res => setAiMock(res.data.aiMock))
-      .catch(() => {});
+    getAppConfig().catch(() => {});
   });
 
   const { refreshing, onRefresherRefresh } = useScrollRefresh(refreshPage);
@@ -102,8 +95,8 @@ export default function HomePage() {
       showScrollbar={false}
       refresherEnabled
       refresherTriggered={refreshing}
-      refresherBackground="#0e0e28"
-      refresherDefaultStyle="white"
+      refresherBackground="#aebefc"
+      refresherDefaultStyle="black"
       onRefresherRefresh={onRefresherRefresh}>
       <View className="page-dark home-page">
         <View className="home-header">

@@ -48,7 +48,7 @@
     font-size: 32rpx;
     color: $text-primary;
     padding: 16rpx 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 32rpx;
   }
 
@@ -63,7 +63,7 @@
     font-size: 32rpx;
     color: $text-primary;
     padding: 16rpx 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .send-code-btn {
@@ -71,7 +71,7 @@
     font-size: 26rpx;
     color: $accent;
     padding: 12rpx 20rpx;
-    border: 1px solid rgba(176, 122, 255, 0.4);
+    border: 1px solid rgba(123, 92, 255, 0.4);
     border-radius: 999rpx;
 
     &.disabled {

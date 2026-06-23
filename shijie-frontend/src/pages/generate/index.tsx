@@ -89,8 +89,8 @@ export default function GeneratePage() {
       showScrollbar={false}
       refresherEnabled
       refresherTriggered={refreshing}
-      refresherBackground="#0e0e28"
-      refresherDefaultStyle="white"
+      refresherBackground="#aebefc"
+      refresherDefaultStyle="black"
       onRefresherRefresh={onRefresherRefresh}>
       <View className="page-dark generate-page">
         <View className="page-title">

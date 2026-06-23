@@ -2,7 +2,7 @@ interface TabIconProps {
   active?: boolean;
 }
 
-const color = (active?: boolean) => (active ? '#b07aff' : '#6a6a8e');
+const color = (active?: boolean) => (active ? '#7b5cff' : '#8a8aaa');
 
 export function TabIconDiscover({ active }: TabIconProps) {
   const c = color(active);

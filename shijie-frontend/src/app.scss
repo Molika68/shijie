@@ -3,24 +3,27 @@
 html,
 body,
 #app {
-  background: #0e0e28;
+  background: #aebefc;
 }
 
 page {
-  background: #0e0e28;
+  background: linear-gradient(to bottom, #aebefc, #eeeef8);
+  background-attachment: fixed;
   font-family:
     -apple-system, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
-  color: #f0f0f5;
+  color: #2a2a4a;
 }
 
 .taro_router,
 .taro_page,
 .taro-tabbar__panel {
-  background: #0e0e28 !important;
+  background: transparent !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .taro_router > .taro_page {
-  background-color: #0e0e28 !important;
+  background-color: transparent !important;
 }
 
 .taro-tabbar__panel > .taro_page.taro_tabbar_page {
@@ -28,12 +31,53 @@ page {
   -webkit-overflow-scrolling: touch;
 }
 
+// 覆盖 Taro 内置 tabbar 组件默认深色背景
+// 采用页面渐变底部的颜色（#eeeef8），让 tabbar 与页面自然衔接
+.taro-tabbar,
+.taro-tabbar__item,
+.taro-tabbar__border,
+.taro-tabbar__panel {
+  background: #eeeef8 !important;
+  background-color: #eeeef8 !important;
+}
+
+.taro-tabbar__border-black,
+.taro-tabbar__border-white {
+  background: #eeeef8 !important;
+}
+
+.taro-tabbar__item-text {
+  color: #8a8aaa !important;
+}
+
+.taro-tabbar__item.taro-tabbar__item--active .taro-tabbar__item-text {
+  color: #7b5cff !important;
+}
+
+// 调整 tabbar 高度，包含安全区域
+.taro-tabbar {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  height: calc(100rpx + constant(safe-area-inset-bottom)) !important;
+  height: calc(100rpx + env(safe-area-inset-bottom)) !important;
+  min-height: 100rpx !important;
+}
+
 .taro-navigation-bar-show {
-  background: #0e0e28 !important;
+  background: #aebefc !important;
+}
+
+// 覆盖 Taro 默认状态栏占位区域样式，防止出现白色间距
+.taro-navigation-bar,
+.taro-navigation-bar__status-bar {
+  background: #aebefc !important;
+  background-color: #aebefc !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .taro-navigation-bar-title {
-  color: #f0f0f5 !important;
+  color: #2a2a4a !important;
 }
 
 .create-input-area textarea,
